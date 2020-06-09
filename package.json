@@ -1,0 +1,49 @@
+{
+  "name": "life-activity",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "app.js",
+    "migrate-db": "sequelize db:migrate",
+    "server": "nodemon --exec babel-node app.js",
+    "client": "npm run start --prefix ../client",
+    "dev-server:client": "../node_modules/.bin/concurrently \\\"npm run server\\\" \\\"npm run client\\\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masteine/life-activity.git"
+  },
+  "author": "Maxim Maximovich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masteine/life-activity/issues"
+  },
+  "homepage": "https://github.com/masteine/life-activity#readme",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "sequelize-cli": "^5.5.1"
+  },
+  "dependencies": {
+    "config": "^3.3.1",
+    "dotenv": "^8.2.0",
+    "express-validator": "^6.4.0",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "nanoid": "^3.0.2",
+    "path": "^0.12.7",
+    "pg": "^8.1.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.8",
+    "uuidv4": "^6.0.9"
+  }
+}
